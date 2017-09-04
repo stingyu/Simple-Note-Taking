@@ -1,0 +1,151 @@
+html,body {
+    margin:0;
+    height:100%;
+}
+ul,li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+body {
+    font:16px/1.5 'Arial';
+    position:relative;
+}
+.layout {
+    max-width:960px;
+    margin: 3px auto;
+    height:100%;
+}
+a {
+    text-decoration: none;
+    color:#000;
+}
+
+#header {
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:10;
+    height: 50px;
+    font-size: 15px;
+    background: #fff;
+    opacity:0.8;
+
+    a {
+        display:block;
+        margin-top: 8px;
+        
+       
+    }
+
+    .user-area {
+        padding-right: 20px;
+        float:right;
+
+        li {
+            float:left;
+            margin-left:10px; 
+             .icon {
+                width: 1.5em;
+                height: 1.5em;
+                vertical-align: -0.15em;
+                fill: currentColor;
+                overflow: hidden;
+                margin-right: 7px;
+            }
+
+            span {
+                color:#000;
+                display:block;
+                margin-top: 8px;
+            }
+        }
+        img {
+            height:30px;
+            margin-top:5px;
+            border-radius: 50%;
+        }
+    }
+    .setting {
+        float:right;
+        margin-left: 9px;
+        display:none;
+    }
+    @keyframes btn-move {
+        0%  {transform: translate(0,0)}
+        50% {transform: translate(2px,3px)}
+        100% {transform: translate(0px,0px)}
+    }
+    .btn-note {
+        float: left;
+        margin-left: 20px;
+        color: #fff;
+        border-radius: 4px;
+        padding: 2px 10px;
+        background-color: #ff9a9a;
+        box-shadow: 2px 6px 6px #ab9fb7;
+        margin-top: 5px;
+       
+    }
+
+
+    .login {
+        float: right;
+        margin-left: 16px;
+    }
+}
+#content {
+    position:relative;
+    margin-top: 40px;
+    margin-left: 90px;
+    height: -webkit-calc(100% - 30px);
+    height: calc(100% - 30px);
+}
+
+@keyframes move-twink-back {
+    from{background-position:0 0;}
+    to {background-position: -10000px 5000px;}
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 383662 */
+  src: url('//at.alicdn.com/t/font_383662_uo7bfnwovp2v5cdi.eot');
+  src: url('//at.alicdn.com/t/font_383662_uo7bfnwovp2v5cdi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_383662_uo7bfnwovp2v5cdi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_383662_uo7bfnwovp2v5cdi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_383662_uo7bfnwovp2v5cdi.svg#iconfont') format('svg');
+}
+.footer {
+    position:absolute;
+    bottom:-240px;
+    left:0;
+    width:100%;
+    background-color: #fff;
+    text-align:center;
+    padding:10px;
+    color:#000;
+    opacity: 0.8;
+    
+    .icon-banquan {
+        font-size:18px;
+    }
+}
+.stars,.twinkling {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:-30px;
+    width:100%;
+    height:-webkit-calc(100% + 30px);
+    display: block;
+}
+
+.stars {
+    background: #000 url(http://uploadfile.huiyi8.com/2015/0126/20150126021507704.jpg) repeat top center;
+    z-index: -2;
+}
+.twinkling {
+    background:transparent url(http://uploadfile.huiyi8.com/2015/0126/20150126021507704.jpg) repeat top center;
+    z-index:-1;
+    animation: move-twink-back 200s linear infinite;
+}
